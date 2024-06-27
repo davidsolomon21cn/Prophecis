@@ -68,7 +68,7 @@ const (
 //		common.GetAppConfig().Spring.Datasource.Db,
 //		//"mlss_gzpc_bdap_dev",
 //		//"mlss@2018",
-//		//"127.0.0.1",
+//		//"10.107.108.178",
 //		//"3306",
 //		//"mlss_gzpc_bdap_dev_01",
 //	)
@@ -114,7 +114,7 @@ func InitDS(encodeFlag bool) {
 		//common.GetAppConfig().Spring.Datasource.Db,
 		//"mlss",
 		//"mlss@2018",
-		//"127.0.0.1",
+		//"10.107.108.178",
 		//"3306",
 		//"mlssdi_test",
 	)

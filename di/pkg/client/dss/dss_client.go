@@ -57,7 +57,7 @@ func GetDSSClient() DSSClient {
 
 	dssClient := DSSClient{
 		//client.BaseClient{
-		//	Address: "127.0.0.1:8088",
+		//	Address: "10.107.116.91:8088",
 		//	Client:  httpClient,
 		//},
 		TokenCode: viper.GetString("linkis.tokenCode"),
@@ -75,7 +75,7 @@ func GetDSSProClient() DSSClient {
 
 	dssClient := DSSClient{
 		//client.BaseClient{
-		//	Address: "127.0.0.1:8088",
+		//	Address: "10.107.116.91:8088",
 		//	Client:  httpClient,
 		//},
 		TokenCode: viper.GetString("linkispro.tokenCode"),

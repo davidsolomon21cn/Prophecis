@@ -20,7 +20,7 @@ workingDir: /root
 
 # supported mode: rsync, hdfs, git
 # syncMode: rsync
-# syncSource: 127.0.0.1::backup/data/logoRecoTrain.zip
+# syncSource: 10.77.29.68::backup/data/logoRecoTrain.zip
 
 syncImage: registry.cn-zhangjiakou.aliyuncs.com/tensorflow-samples/rsync
 # imagePullPolicy: Always

@@ -44,7 +44,7 @@ func GetLinkisClient() LinkisClient {
 	linkisClient := LinkisClient{
 		TokenCode: viper.GetString("linkis.tokenCode"),
 		BaseClient: client.BaseClient{
-			//Address: "http://127.0.0.1:8088",
+			//Address: "http://10.107.116.91:8088",
 			Address: "http://" + viper.GetString("linkis.address"),
 			Client:  httpClient,
 		},

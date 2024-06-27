@@ -9,7 +9,7 @@ db:
   port: 3306
   name: prophecis_db
   user: prophecis
-  pwd: password
+  pwd: prophecis@wedatasphere
 image:
   registry: wedatasphere/prophecis
   pullPolicy: Always
@@ -32,7 +32,7 @@ linkispro:
 minio:
   server: 127.0.0.1
   port: 32001
-  keyid: password
+  keyid: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
   accesskey: AKIAIOSFODNN7EXAMPLE
 mongo:
   address: mongo.prophecis.svc.cluster.local
@@ -48,7 +48,7 @@ etcd:
 objectstore:
   type: s3_datastore
   username: AKIAIOSFODNN7EXAMPLE
-  password: password
+  password: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 elasticsearch:
   address: http://elasticsearch.prophecis.svc.cluster.local:9200
   host: elasticsearch.prophecis.svc.cluster.local
@@ -181,7 +181,7 @@ cc:
         mlssData: /data/bdap-ss/mlss-data
   admin:
     user: hadoop
-    password: password
+    password: hadoop
 
 ccGateway:
   image:
