@@ -3,9 +3,9 @@ spring:
   platformNS: mlss-dev
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://127.0.0.1:3306/mlss_gzpc_bdap_dev_01?useUnicode=true&characterEncoding=utf-8
+#    url: jdbc:mysql://10.107.108.178:3306/mlss_gzpc_bdap_dev_01?useUnicode=true&characterEncoding=utf-8
     url: jdbc:mysql://localhost:3306/mlss_local_db?useUnicode=true&characterEncoding=utf-8
-#    url: jdbc:mysql://127.0.0.1:3306/mlss_local_db?useUnicode=true&characterEncoding=utf-8
+#    url: jdbc:mysql://10.35.1.46:3306/mlss_local_db?useUnicode=true&characterEncoding=utf-8
 #    username: root
 #    password: 123456
     username: mlss_gzpc_bdap_dev
@@ -14,13 +14,13 @@ spring:
 #    ip: localhost
 #    port: 3306
 #    db: mlss_local_db
-    ip: 127.0.0.1
+    ip: 10.107.108.178
     port: 3306
     db: mlss_gzpc_bdap_dev_01
   tokenDB:
     username: hdfs_gz_bdap
     password: hdfs@201901
-    ip: 127.0.0.1
+    ip: 10.107.108.111
     port: 3306
     db: hdfs_gz_bdap_test_01
 server:
@@ -69,7 +69,7 @@ core:
     maxTokenExpireHour: 24
     defaultTimestampTimeout: 2592000
   um:
-    host: 127.0.0.1
+    host: 10.107.96.15
     port: 8088
     appId: "0015395862955265"
     appToken: MLSS-DI
@@ -102,12 +102,12 @@ core:
           JYexQ9KCFZMkvplb10Nr8fE=
           -----END PRIVATE KEY-----"
   sso:
-    defaultService: http://127.0.0.1:7777/home.html
-    casServiceUrlPrefix: http://127.0.0.1:8080/cas
-    casLogin: http://127.0.0.1:8080/cas/login
-    ssoLanding: http://127.0.0.1:7777/ssolanding.html
+    defaultService: http://10.255.32.137:7777/home.html
+    casServiceUrlPrefix: http://10.107.99.46:8080/cas
+    casLogin: http://10.107.99.46:8080/cas/login
+    ssoLanding: http://10.255.32.137:7777/ssolanding.html
   ims:
-    accessUrl: http://127.0.0.1:10812/ims_data_access/send_alarm_by_json.do
+    accessUrl: http://10.107.118.38:10812/ims_data_access/send_alarm_by_json.do
     subSystemId: 5265
     alertWay: 1,2,3
     alertReceiver: luckliu
@@ -124,18 +124,18 @@ core:
   es:
     #    address: elasticsearch
     #    port: 9300
-    address: 127.0.0.1
+    address: 10.107.105.207
     port: 30782
     learnerIndex: dlaas_learner_data
     dateIndex: logstash-
   gateway:
-    bdpAddress: http://127.0.0.1:30795
-    bdapAddress: http://127.0.0.1:30794
-    bdapsafeAddress: http://127.0.0.1:30796
+    bdpAddress: http://10.107.105.207:30795
+    bdapAddress: http://10.107.105.207:30794
+    bdapsafeAddress: http://10.107.105.207:30796
   authAddress:
-    user: http://127.0.0.1:30800/cc/v1/inter/user
-    auth: http://127.0.0.1:30800/cc/v1/inter/auth
-    ip: http://127.0.0.1:30800/cc/v1/inter/ip
+    user: http://10.107.105.207:30800/cc/v1/inter/user
+    auth: http://10.107.105.207:30800/cc/v1/inter/auth
+    ip: http://10.107.105.207:30800/cc/v1/inter/ip
   cache:
     cacheTime: 24h
     defaultTimestampTimeout: 30000

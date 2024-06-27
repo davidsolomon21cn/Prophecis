@@ -15,11 +15,11 @@ HDFS (Hadoop Distributed File System), AWS S3 (Simple Storage Service) or Google
 ## Copy a Model in NAS Storage
 
 
-*  create `/serving` directory in the NFS server side, take `127.0.0.1` as example
+*  create `/serving` directory in the NFS server side, take `10.244.1.4` as example
 
 ```
 mkdir /nfs
-mount -t nfs -o vers=4.0 127.0.0.1:/ /nfs
+mount -t nfs -o vers=4.0 10.244.1.4:/ /nfs
 mkdir -p /nfs/serving
 umount /nfs
 ```
@@ -28,7 +28,7 @@ umount /nfs
 
 ```
 mkdir /serving
-mount -t nfs -o vers=4.0 127.0.0.1:/serving /serving
+mount -t nfs -o vers=4.0 10.244.1.4:/serving /serving
 mkdir -p /serving/model
 cd /serving/model
 curl -O https://raw.githubusercontent.com/kubernetes/charts/master/stable/tensorflow-serving/models/mnist-export.tar.gz
@@ -71,7 +71,7 @@ spec:
     storage: 5Gi
   nfs:
   	# FIXME: use the right IP
-    server: 127.0.0.1
+    server: 10.244.1.4
     path: "/serving/model/mnist"
 ```
 

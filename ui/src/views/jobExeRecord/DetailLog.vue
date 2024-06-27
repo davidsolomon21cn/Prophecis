@@ -66,7 +66,7 @@ export default {
       this.count++
       if (this.count <= 2) {
         let userId = localStorage.getItem('userId')
-        // let host = '127.0.0.1:30794'
+        // let host = '10.107.105.207:30794'
         let host = window.location.host
         let webSocketUrl = `ws://${host}/di/${this.FesEnv.diApiVersion}/models/${this.modelId}/logs?follow=false&version=2017-02-13&mlss-userid=${userId}`
         this.websock = new WebSocket(webSocketUrl)

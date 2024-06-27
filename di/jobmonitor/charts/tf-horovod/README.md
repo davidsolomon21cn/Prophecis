@@ -18,11 +18,11 @@ This chart implements a solution of automatic configuration and deployment for O
 
 ## Setup NAS Storage for training
 
-* create `/output/training_logs` in NFS server side, take NFS server `127.0.0.1` 
+* create `/output/training_logs` in NFS server side, take NFS server `10.244.1.4` 
 
 ```
 mkdir /nfs
-mount -t nfs -o vers=4.0 127.0.0.1:/ /nfs
+mount -t nfs -o vers=4.0 10.244.1.4:/ /nfs
 mkdir -p /nfs/output/training_logs
 umount /nfs
 ```
@@ -85,7 +85,7 @@ volumeMounts:
 volumes:
    - name: training
      nfs:
-      server: "127.0.0.1"
+      server: "10.244.1.4"
       path: /output/training_logs
 
 ```
